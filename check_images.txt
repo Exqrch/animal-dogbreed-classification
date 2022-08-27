@@ -1,0 +1,45 @@
+Questions regarding Uploaded Image Classification:
+
+1. Did the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed? If not, report the differences in the classifications.
+
+Answer: Yes, all three model correctly classify the breed of the dog.
+
+
+2. Did each of the three model architectures classify the breed of dog in Dog_01.jpg to be the same breed of dog as that model architecture classified Dog_02.jpg? If not, report the differences in the classifications.
+
+Answer: Yes, all three model correctly classify the breed of the rotate image of the dog.
+
+
+3. Did the three model architectures correctly classify Animal_Name_01.jpg and Object_Name_01.jpg to not be dogs? If not, report the misclassifications.
+
+Answer: For non-dog animal (Black Bear), the answer is yes, all three model correctly classify the image.
+For the object (smartphone), no, but looking closer at the label, they are correct, just the labeling convention that isn't correct. (smartphone is identified as hand-held computer)
+
+
+4. Based upon your answers for questions 1. - 3. above, select the model architecture that you feel did the best at classifying the four uploaded images. Describe why you selected that model architecture as the best on uploaded image classification.
+
+Answer: Alexnet and Resnet equally. All three models have the same performance using the uploaded image test, but alexnet and resnet requires much less time compared to vgg model.
+
+But, if we are using the 40 image datasets, performance wise, vgg have the highest performance, even though it is sacrificing a lot of time to do so.
+====================== Final Results ======================
+Alexnet Results: 
+             pct_match           = 75%
+             pct_correct_dogs    = 100%
+             pct_correct_notdogs = 100%
+             pct_correct_breed   = 80%
+             elapsed time        = 3s
+Resnet Results: 
+             pct_match           = 82.5%
+             pct_correct_dogs    = 100%
+             pct_correct_notdogs = 90%
+             pct_correct_breed   = 90%
+             elapsed time        = 5s
+Vgg Results: 
+             pct_match           = 87.5%
+             pct_correct_dogs    = 100%
+             pct_correct_notdogs = 100%
+             pct_correct_breed   = 93.33%
+             elapsed time        = 33s
+===========================================================
+Best model   : vgg
+Fastest model: Alexnet
